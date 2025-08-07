@@ -1,9 +1,10 @@
 services:
   - type: web
     name: eps-api
-    env: python
-    buildCommand: ""
-    startCommand: "python app.py"
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
     envVars:
-      - key: PORT
-        value: 5000
+      - key: PYTHON_VERSION
+        value: 3.10
+
