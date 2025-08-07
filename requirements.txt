@@ -5,4 +5,8 @@ lxml
 pandas
 gunicorn   
 cloudscraper
+pandas
+beautifulsoup4
+lxml
+tqdm
 
