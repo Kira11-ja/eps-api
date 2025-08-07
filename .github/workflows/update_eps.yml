@@ -2,8 +2,6 @@ name: update
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '0 0 * * *'  # 每天 UTC 0:00 執行一次
 
 jobs:
   update:
@@ -12,28 +10,24 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GH_PAT }}  # <<<<< 使用你的 token 而不是預設的 bot
 
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.11'
+          python-version: "3.11"
 
       - name: Install dependencies
-        run: |
-          pip install -r requirements.txt
+        run: pip install -r requirements.txt
 
       - name: Run script
-        run: |
-          python update_cache.py
+        run: python your_main_script.py  # ← 換成你的主程式檔案名稱
 
       - name: Commit and push if changed
-        env:
-          GH_PAT: ${{ secrets.GH_PAT }}
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          
-          git remote set-url origin https://x-access-token:${GH_PAT}@github.com/${{ github.repository }}
-          git add .
-          git commit -m "🔄 Update EPS cache" || echo "No changes to commit"
-          git push origin HEAD:main
+          git add eps_data.json
+          git commit -m "✅ Update EPS cache" || echo "No changes to commit"
+          git push
