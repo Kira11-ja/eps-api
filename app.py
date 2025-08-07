@@ -1,44 +1,37 @@
 from flask import Flask, request, jsonify
-import cloudscraper
-from bs4 import BeautifulSoup
+import json
+import os
 
 app = Flask(__name__)
 
-@app.route("/")
-def index():
-    return "<h1>✅ EPS API is running!</h1>"
+# 設定 JSON 快取檔案路徑
+CACHE_FILE = "eps_data.json"
 
-@app.route("/api/eps")
-def get_eps():
-    stock_id = request.args.get("stock_id")
-    url = f"https://goodinfo.tw/tw/StockBzPerformance.asp?STOCK_ID={stock_id}"
+@app.route('/')
+def home():
+    return '✅ EPS API is running (from JSON cache)!'
+
+@app.route('/api/eps')
+def get_eps_data():
+    stock_id = request.args.get('stock_id')
+    if not stock_id:
+        return jsonify({"error": "Missing stock_id parameter"}), 400
+
+    # 讀取快取檔
+    if not os.path.exists(CACHE_FILE):
+        return jsonify({"error": "Cache file not found"}), 500
 
     try:
-        scraper = cloudscraper.create_scraper()
-        res = scraper.get(url)
-        res.encoding = "utf-8"
-
-        soup = BeautifulSoup(res.text, "html.parser")
-
-        # 嘗試抓 EPS 表格（以下是範例，要根據你原本邏輯調整）
-        eps_table = soup.find("table", class_="b1 p4_2 r10 box_shadow")
-        if eps_table is None:
-            raise Exception("EPS table not found")
-
-        # 在這裡加入你的資料解析邏輯
-        eps = 12.34
-        pe = 18.9
-        peg = 1.23
-
-        return jsonify({
-            "stock_id": stock_id,
-            "eps": eps,
-            "pe": pe,
-            "peg": peg
-        })
-
+        with open(CACHE_FILE, 'r', encoding='utf-8') as f:
+            data = json.load(f)
     except Exception as e:
-        return jsonify({
-            "stock_id": stock_id,
-            "error": str(e)
-        })
+        return jsonify({"error": str(e)}), 500
+
+    result = data.get(stock_id)
+    if result is None:
+        return jsonify({"error": "Stock ID not found in cache", "stock_id": stock_id}), 404
+
+    return jsonify(result)
+
+if __name__ == '__main__':
+    app.run()
