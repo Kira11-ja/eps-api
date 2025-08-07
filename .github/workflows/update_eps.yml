@@ -27,9 +27,12 @@ jobs:
         python generate_eps.py
 
     - name: Commit and push if changed
+      env:
+      GH_PAT: ${{ secrets.GH_PAT }}
       run: |
-        git config --global user.name "github-actions[bot]"
-        git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-        git add eps_data.json || true
-        git diff --cached --quiet || git commit -m "📈 Update EPS cache"
-        git push
+      git config --global user.name "github-actions[bot]"
+      git config --global user.email "github-actions[bot]@users.noreply.github.com"
+      git remote set-url origin https://x-access-token:${GH_PAT}@github.com/Kira11-ja/eps-api.git
+      git add eps_data.json
+      git commit -m "Update EPS cache" || echo "No changes to commit"
+      git push origin main
