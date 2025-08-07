@@ -22,7 +22,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Run script
-        run: python your_main_script.py  # ← 換成你的主程式檔案名稱
+        run: python generate_eps.py  # ← 換成你的主程式檔案名稱
 
       - name: Commit and push if changed
         run: |
