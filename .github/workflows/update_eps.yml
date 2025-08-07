@@ -3,7 +3,7 @@ name: update
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 16 * * *'  # 每天台灣時間 00:00 執行（UTC+8）
+    - cron: '0 0 * * *'  # 每天 UTC 0:00 執行一次
 
 jobs:
   update:
@@ -16,7 +16,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: 3.10
+          python-version: '3.11'
 
       - name: Install dependencies
         run: |
@@ -24,7 +24,7 @@ jobs:
 
       - name: Run script
         run: |
-          python generate_eps.py
+          python update_cache.py
 
       - name: Commit and push if changed
         env:
@@ -32,7 +32,8 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          
           git remote set-url origin https://x-access-token:${GH_PAT}@github.com/${{ github.repository }}
-          git add eps_data.json
-          git diff --cached --quiet || git commit -m "Update EPS cache"
+          git add .
+          git commit -m "🔄 Update EPS cache" || echo "No changes to commit"
           git push origin HEAD:main
