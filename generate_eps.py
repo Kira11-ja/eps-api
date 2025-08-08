@@ -1,66 +1,65 @@
-name: update_eps
+# generate_eps.py
+import json
+from io import StringIO
 
-on:
-  workflow_dispatch: {}            # 手動跑
-  schedule:
-    - cron: "0 2 * * *"            # 每天 02:00 自動跑（不需要就刪掉這段）
+import pandas as pd
+import requests
+from bs4 import BeautifulSoup
 
-permissions:
-  contents: write                  # 允許寫入 repo（搭配 token 更保險）
+# 你要抓的股票清單
+STOCK_IDS = ["2330", "2317", "2303"]
 
-jobs:
-  update:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repo
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-          # 使用你在 Secrets 建的 PAT（名稱 GH_PAT）
-          token: ${{ secrets.GH_PAT }}
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)",
+    "Cookie": "IS_TOUCH_DEVICE=F; SCREEN_SIZE=WIDTH=2048&HEIGHT=1280;",
+}
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
+def fetch_eps(stock_id: str):
+    """抓取單一股票 EPS 表格並回傳 list[dict]"""
+    url = f"https://goodinfo.tw/tw/StockBzPerformance.asp?STOCK_ID={stock_id}"
+    r = requests.get(url, headers=HEADERS, timeout=20)
+    r.raise_for_status()
+    r.encoding = "utf-8"
 
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
+    soup = BeautifulSoup(r.text, "lxml")
+    table = soup.select_one("#txtFinDetailData")
+    if not table:
+        print(f"⚠️ 找不到表格 for {stock_id}")
+        return []
 
-      - name: Run scraper
-        run: |
-          python generate_eps.py
+    # 用 StringIO 包起來避免 pandas 的 FutureWarning
+    dfs = pd.read_html(StringIO(str(table)))
+    if not dfs:
+        print(f"⚠️ 讀表失敗 for {stock_id}")
+        return []
 
-      - name: Show outputs (debug)
-        run: |
-          echo "PWD=$(pwd)"
-          ls -la
-          echo "---- JSON files ----"
-          ls -la *.json || true
-          echo "---- First lines of eps_cache.json ----"
-          test -f eps_cache.json && head -n 20 eps_cache.json || echo "eps_cache.json not found"
+    df = dfs[0]
+    df.columns = df.columns.map(str)
 
-      - name: Ensure eps_cache.json exists
-        run: |
-          if [ ! -f eps_cache.json ]; then
-            echo "❌ eps_cache.json not found. Stop."
-            exit 1
-          fi
+    rows = []
+    for _, row in df.iterrows():
+        rows.append({
+            "year": row.get("年度") or row.get("年/季") or "",
+            "eps": row.get("EPS(元)") or row.get("稅後EPS(元)") or "",
+            "yoy": row.get("年增(元)") or "",
+            "pe":  row.get("本益比") or "",
+        })
+    return rows
 
-      - name: Commit and push if changed
-        run: |
-          git config user.name  "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+def main():
+    cache = {}
+    for sid in STOCK_IDS:
+        try:
+            data = fetch_eps(sid)
+            cache[sid] = data
+            print(f"✅ 完成 {sid}（共 {len(data)} 筆）")
+        except Exception as e:
+            print(f"❌ 失敗 {sid}: {e}")
+            cache[sid] = []
 
-          git add eps_cache.json
+    with open("eps_cache.json", "w", encoding="utf-8") as f:
+        json.dump(cache, f, ensure_ascii=False, indent=2)
+    print("📁 eps_cache.json 儲存完成！")
 
-          # 沒有變更就不要 commit / push
-          if git diff --cached --quiet; then
-            echo "No changes to commit."
-            exit 0
-          fi
-
-          git commit -m "✅ Update EPS cache [skip ci]"
-          git push
+if __name__ == "__main__":
+    main()
