@@ -6,12 +6,12 @@ on:
 jobs:
   update:
     runs-on: ubuntu-latest
- 
+
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
         with:
-          token: ${{ secrets.GH_PAT }}  # <<<<< 使用你的 token 而不是預設的 bot
+          token: ${{ secrets.GH_PAT }}  # 使用你的 PAT
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -19,10 +19,12 @@ jobs:
           python-version: "3.11"
 
       - name: Install dependencies
-        run: pip install -r requirements.txt
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
 
       - name: Run script
-        run: python generate_eps.py  # ← 換成你的主程式檔案名稱
+        run: python generate_eps.py  # 換成你的主程式檔名
 
       - name: Show outputs (debug)
         run: |
@@ -33,18 +35,14 @@ jobs:
           git status
 
       - name: Upload debug artifacts
-         if: always()
-         uses: actions/upload-artifact@v4
-         with:
-           name: debug-pages
-           path: |
-             debug/**
-             eps_cache.json
-           if-no-files-found: warn
-
-
-
-
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: debug-pages
+          path: |
+            debug/**
+            eps_cache.json
+          if-no-files-found: warn
 
       - name: Commit and push if changed
         run: |
@@ -60,4 +58,3 @@ jobs:
           git add eps_cache.json
           git commit -m "✅ Update EPS cache" || echo "No changes to commit"
           git push
-
