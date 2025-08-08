@@ -1,223 +1,223 @@
 {
   "2330": [
     {
-      "year": "年度    25Q1\nName: 0, dtype: object",
+      "year": "25Q1",
       "eps": "13.95",
       "ROE": "32.3  (年估)",
-      "priceavg": "1024"
+      "priceavg": "1025"
     },
     {
-      "year": "年度    2024\nName: 1, dtype: object",
+      "year": "2024",
       "eps": "45.25",
       "ROE": "30",
       "priceavg": "889"
     },
     {
-      "year": "年度    2023\nName: 2, dtype: object",
+      "year": "2023",
       "eps": "32.34",
       "ROE": "26",
       "priceavg": "543"
     },
     {
-      "year": "年度    2022\nName: 3, dtype: object",
+      "year": "2022",
       "eps": "39.2",
       "ROE": "39.6",
       "priceavg": "516"
     },
     {
-      "year": "年度    2021\nName: 4, dtype: object",
+      "year": "2021",
       "eps": "23.01",
       "ROE": "29.7",
       "priceavg": "598"
     },
     {
-      "year": "年度    2020\nName: 5, dtype: object",
+      "year": "2020",
       "eps": "19.97",
       "ROE": "29.8",
       "priceavg": "379"
     },
     {
-      "year": "年度    2019\nName: 6, dtype: object",
+      "year": "2019",
       "eps": "13.32",
       "ROE": "20.9",
       "priceavg": "262"
     },
     {
-      "year": "年度    2018\nName: 7, dtype: object",
+      "year": "2018",
       "eps": "13.54",
       "ROE": "21.9",
       "priceavg": "237"
     },
     {
-      "year": "年度    2017\nName: 8, dtype: object",
+      "year": "2017",
       "eps": "13.23",
       "ROE": "23.6",
       "priceavg": "210"
     },
     {
-      "year": "年度    2016\nName: 9, dtype: object",
+      "year": "2016",
       "eps": "12.89",
       "ROE": "25.6",
       "priceavg": "166"
     },
     {
-      "year": "年度    2015\nName: 10, dtype: object",
+      "year": "2015",
       "eps": "11.82",
       "ROE": "27",
       "priceavg": "140"
     },
     {
-      "year": "年度    2014\nName: 11, dtype: object",
+      "year": "2014",
       "eps": "10.18",
       "ROE": "27.9",
       "priceavg": "123"
     },
     {
-      "year": "年度    2013\nName: 12, dtype: object",
+      "year": "2013",
       "eps": "7.26",
       "ROE": "23.9",
       "priceavg": "104"
     },
     {
-      "year": "年度    2012\nName: 13, dtype: object",
+      "year": "2012",
       "eps": "6.42",
       "ROE": "24.5",
       "priceavg": "84.1"
     },
     {
-      "year": "年度    2011\nName: 14, dtype: object",
+      "year": "2011",
       "eps": "5.18",
       "ROE": "22.2",
       "priceavg": "72.1"
     },
     {
-      "year": "年度    2010\nName: 15, dtype: object",
+      "year": "2010",
       "eps": "6.24",
       "ROE": "30.1",
       "priceavg": "62"
     },
     {
-      "year": "年度    2009\nName: 16, dtype: object",
+      "year": "2009",
       "eps": "3.45",
       "ROE": "18.3",
       "priceavg": "55.5"
     },
     {
-      "year": "年度    2008\nName: 17, dtype: object",
+      "year": "2008",
       "eps": "3.86",
       "ROE": "20.7",
       "priceavg": "56.4"
     },
     {
-      "year": "年度    年度\nName: 18, dtype: object",
+      "year": "年度",
       "eps": "EPS(元)",
       "ROE": "ROE  (%)",
       "priceavg": "年度股價(元)"
     },
     {
-      "year": "年度    年度\nName: 19, dtype: object",
+      "year": "年度",
       "eps": "稅後  EPS",
       "ROE": "ROE  (%)",
       "priceavg": "平均"
     },
     {
-      "year": "年度    2007\nName: 20, dtype: object",
+      "year": "2007",
       "eps": "4.14",
       "ROE": "22",
       "priceavg": "65.5"
     },
     {
-      "year": "年度    2006\nName: 21, dtype: object",
+      "year": "2006",
       "eps": "4.93",
       "ROE": "26.6",
       "priceavg": "61.3"
     },
     {
-      "year": "年度    2005\nName: 22, dtype: object",
+      "year": "2005",
       "eps": "3.79",
       "ROE": "22.2",
       "priceavg": "54.1"
     },
     {
-      "year": "年度    2004\nName: 23, dtype: object",
+      "year": "2004",
       "eps": "3.97",
       "ROE": "25.4",
       "priceavg": "52.4"
     },
     {
-      "year": "年度    2003\nName: 24, dtype: object",
+      "year": "2003",
       "eps": "2.33",
       "ROE": "15.1",
       "priceavg": "56.4"
     },
     {
-      "year": "年度    2002\nName: 25, dtype: object",
+      "year": "2002",
       "eps": "1.14",
       "ROE": "7.54",
       "priceavg": "67.4"
     },
     {
-      "year": "年度    2001\nName: 26, dtype: object",
+      "year": "2001",
       "eps": "0.83",
       "ROE": "5.37",
       "priceavg": "77.7"
     },
     {
-      "year": "年度    2000\nName: 27, dtype: object",
+      "year": "2000",
       "eps": "5.71",
       "ROE": "31.4",
       "priceavg": "146"
     },
     {
-      "year": "年度    1999\nName: 28, dtype: object",
+      "year": "1999",
       "eps": "3.24",
       "ROE": "19.9",
       "priceavg": "120"
     },
     {
-      "year": "年度    1998\nName: 29, dtype: object",
+      "year": "1998",
       "eps": "2.54",
       "ROE": "20",
       "priceavg": "101"
     },
     {
-      "year": "年度    1997\nName: 30, dtype: object",
+      "year": "1997",
       "eps": "4.4",
       "ROE": "29.6",
       "priceavg": "109"
     },
     {
-      "year": "年度    1996\nName: 31, dtype: object",
+      "year": "1996",
       "eps": "7.31",
       "ROE": "45.3",
       "priceavg": "63.8"
     },
     {
-      "year": "年度    1995\nName: 32, dtype: object",
+      "year": "1995",
       "eps": "10.48",
       "ROE": "44.9",
       "priceavg": "128"
     },
     {
-      "year": "年度    1994\nName: 33, dtype: object",
+      "year": "1994",
       "eps": "10.86",
       "ROE": "-",
       "priceavg": "159"
     },
     {
-      "year": "年度    1993\nName: 34, dtype: object",
+      "year": "1993",
       "eps": "-",
       "ROE": "-",
       "priceavg": "-"
     },
     {
-      "year": "年度    1992\nName: 35, dtype: object",
+      "year": "1992",
       "eps": "-",
       "ROE": "-",
       "priceavg": "-"
     },
     {
-      "year": "年度    1991\nName: 36, dtype: object",
+      "year": "1991",
       "eps": "-",
       "ROE": "-",
       "priceavg": "-"
@@ -225,229 +225,229 @@
   ],
   "2317": [
     {
-      "year": "年度    25Q1\nName: 0, dtype: object",
+      "year": "25Q1",
       "eps": "3.03",
       "ROE": "9.93  (年估)",
       "priceavg": "162"
     },
     {
-      "year": "年度    2024\nName: 1, dtype: object",
+      "year": "2024",
       "eps": "11.01",
       "ROE": "9.71",
       "priceavg": "170"
     },
     {
-      "year": "年度    2023\nName: 2, dtype: object",
+      "year": "2023",
       "eps": "10.25",
       "ROE": "9.28",
       "priceavg": "104"
     },
     {
-      "year": "年度    2022\nName: 3, dtype: object",
+      "year": "2022",
       "eps": "10.21",
       "ROE": "9.37",
       "priceavg": "105"
     },
     {
-      "year": "年度    2021\nName: 4, dtype: object",
+      "year": "2021",
       "eps": "10.05",
       "ROE": "10.1",
       "priceavg": "111"
     },
     {
-      "year": "年度    2020\nName: 5, dtype: object",
+      "year": "2020",
       "eps": "7.34",
       "ROE": "7.96",
       "priceavg": "80.2"
     },
     {
-      "year": "年度    2019\nName: 6, dtype: object",
+      "year": "2019",
       "eps": "8.32",
       "ROE": "9.68",
       "priceavg": "78.4"
     },
     {
-      "year": "年度    2018\nName: 7, dtype: object",
+      "year": "2018",
       "eps": "8.03",
       "ROE": "10.4",
       "priceavg": "82.7"
     },
     {
-      "year": "年度    2017\nName: 8, dtype: object",
+      "year": "2017",
       "eps": "8.01",
       "ROE": "11.7",
       "priceavg": "103"
     },
     {
-      "year": "年度    2016\nName: 9, dtype: object",
+      "year": "2016",
       "eps": "8.6",
       "ROE": "13.8",
       "priceavg": "81.3"
     },
     {
-      "year": "年度    2015\nName: 10, dtype: object",
+      "year": "2015",
       "eps": "9.42",
       "ROE": "14.7",
       "priceavg": "89.1"
     },
     {
-      "year": "年度    2014\nName: 11, dtype: object",
+      "year": "2014",
       "eps": "8.85",
       "ROE": "14.8",
       "priceavg": "93.3"
     },
     {
-      "year": "年度    2013\nName: 12, dtype: object",
+      "year": "2013",
       "eps": "8.16",
       "ROE": "14.4",
       "priceavg": "78.5"
     },
     {
-      "year": "年度    2012\nName: 13, dtype: object",
+      "year": "2012",
       "eps": "8.02",
       "ROE": "14.1",
       "priceavg": "92.1"
     },
     {
-      "year": "年度    2011\nName: 14, dtype: object",
+      "year": "2011",
       "eps": "7.65",
       "ROE": "14.5",
       "priceavg": "92.9"
     },
     {
-      "year": "年度    2010\nName: 15, dtype: object",
+      "year": "2010",
       "eps": "8.01",
       "ROE": "15.3",
       "priceavg": "127"
     },
     {
-      "year": "年度    2009\nName: 16, dtype: object",
+      "year": "2009",
       "eps": "8.84",
       "ROE": "17.6",
       "priceavg": "106"
     },
     {
-      "year": "年度    2008\nName: 17, dtype: object",
+      "year": "2008",
       "eps": "7.44",
       "ROE": "14.6",
       "priceavg": "141"
     },
     {
-      "year": "年度    年度\nName: 18, dtype: object",
+      "year": "年度",
       "eps": "EPS(元)",
       "ROE": "ROE  (%)",
       "priceavg": "年度股價(元)"
     },
     {
-      "year": "年度    年度\nName: 19, dtype: object",
+      "year": "年度",
       "eps": "稅後  EPS",
       "ROE": "ROE  (%)",
       "priceavg": "平均"
     },
     {
-      "year": "年度    2007\nName: 20, dtype: object",
+      "year": "2007",
       "eps": "12.35",
       "ROE": "25.3",
       "priceavg": "239"
     },
     {
-      "year": "年度    2006\nName: 21, dtype: object",
+      "year": "2006",
       "eps": "11.59",
       "ROE": "26.9",
       "priceavg": "208"
     },
     {
-      "year": "年度    2005\nName: 22, dtype: object",
+      "year": "2005",
       "eps": "10.6",
       "ROE": "27.6",
       "priceavg": "156"
     },
     {
-      "year": "年度    2004\nName: 23, dtype: object",
+      "year": "2004",
       "eps": "9.21",
       "ROE": "27.4",
       "priceavg": "132"
     },
     {
-      "year": "年度    2003\nName: 24, dtype: object",
+      "year": "2003",
       "eps": "9.98",
       "ROE": "29.9",
       "priceavg": "131"
     },
     {
-      "year": "年度    2002\nName: 25, dtype: object",
+      "year": "2002",
       "eps": "8.18",
       "ROE": "27",
       "priceavg": "145"
     },
     {
-      "year": "年度    2001\nName: 26, dtype: object",
+      "year": "2001",
       "eps": "7.4",
       "ROE": "26.2",
       "priceavg": "168"
     },
     {
-      "year": "年度    2000\nName: 27, dtype: object",
+      "year": "2000",
       "eps": "7.11",
       "ROE": "26.1",
       "priceavg": "246"
     },
     {
-      "year": "年度    1999\nName: 28, dtype: object",
+      "year": "1999",
       "eps": "7.06",
       "ROE": "28.7",
       "priceavg": "202"
     },
     {
-      "year": "年度    1998\nName: 29, dtype: object",
+      "year": "1998",
       "eps": "7.6",
       "ROE": "38.7",
       "priceavg": "183"
     },
     {
-      "year": "年度    1997\nName: 30, dtype: object",
+      "year": "1997",
       "eps": "7.16",
       "ROE": "38.4",
       "priceavg": "179"
     },
     {
-      "year": "年度    1996\nName: 31, dtype: object",
+      "year": "1996",
       "eps": "5.3",
       "ROE": "29",
       "priceavg": "68.8"
     },
     {
-      "year": "年度    1995\nName: 32, dtype: object",
+      "year": "1995",
       "eps": "6.38",
       "ROE": "31",
       "priceavg": "94.1"
     },
     {
-      "year": "年度    1994\nName: 33, dtype: object",
+      "year": "1994",
       "eps": "3.34",
       "ROE": "26.6",
       "priceavg": "82.4"
     },
     {
-      "year": "年度    1993\nName: 34, dtype: object",
+      "year": "1993",
       "eps": "-",
       "ROE": "-",
       "priceavg": "48.6"
     },
     {
-      "year": "年度    1992\nName: 35, dtype: object",
+      "year": "1992",
       "eps": "-",
       "ROE": "-",
       "priceavg": "58.7"
     },
     {
-      "year": "年度    1991\nName: 36, dtype: object",
+      "year": "1991",
       "eps": "-",
       "ROE": "-",
       "priceavg": "65"
     },
     {
-      "year": "年度    1990\nName: 37, dtype: object",
+      "year": "1990",
       "eps": "-",
       "ROE": "-",
       "priceavg": "-"
@@ -455,229 +455,229 @@
   ],
   "2303": [
     {
-      "year": "年度    25Q2\nName: 0, dtype: object",
+      "year": "25Q2",
       "eps": "1.34",
       "ROE": "9.28  (年估)",
       "priceavg": "44.1"
     },
     {
-      "year": "年度    2024\nName: 1, dtype: object",
+      "year": "2024",
       "eps": "3.8",
       "ROE": "12.8",
       "priceavg": "51"
     },
     {
-      "year": "年度    2023\nName: 2, dtype: object",
+      "year": "2023",
       "eps": "4.93",
       "ROE": "17.7",
       "priceavg": "48.8"
     },
     {
-      "year": "年度    2022\nName: 3, dtype: object",
+      "year": "2022",
       "eps": "7.09",
       "ROE": "28.5",
       "priceavg": "46.2"
     },
     {
-      "year": "年度    2021\nName: 4, dtype: object",
+      "year": "2021",
       "eps": "4.57",
       "ROE": "21.3",
       "priceavg": "56.4"
     },
     {
-      "year": "年度    2020\nName: 5, dtype: object",
+      "year": "2020",
       "eps": "2.42",
       "ROE": "12.3",
       "priceavg": "22.9"
     },
     {
-      "year": "年度    2019\nName: 6, dtype: object",
+      "year": "2019",
       "eps": "0.82",
       "ROE": "2.96",
       "priceavg": "13.3"
     },
     {
-      "year": "年度    2018\nName: 7, dtype: object",
+      "year": "2018",
       "eps": "0.58",
       "ROE": "1.26",
       "priceavg": "15"
     },
     {
-      "year": "年度    2017\nName: 8, dtype: object",
+      "year": "2017",
       "eps": "0.79",
       "ROE": "3.06",
       "priceavg": "13.7"
     },
     {
-      "year": "年度    2016\nName: 9, dtype: object",
+      "year": "2016",
       "eps": "0.68",
       "ROE": "1.73",
       "priceavg": "12"
     },
     {
-      "year": "年度    2015\nName: 10, dtype: object",
+      "year": "2015",
       "eps": "1.08",
       "ROE": "5.66",
       "priceavg": "13.1"
     },
     {
-      "year": "年度    2014\nName: 11, dtype: object",
+      "year": "2014",
       "eps": "0.97",
       "ROE": "5.25",
       "priceavg": "13.4"
     },
     {
-      "year": "年度    2013\nName: 12, dtype: object",
+      "year": "2013",
       "eps": "1.01",
       "ROE": "5.81",
       "priceavg": "12.3"
     },
     {
-      "year": "年度    2012\nName: 13, dtype: object",
+      "year": "2012",
       "eps": "0.49",
       "ROE": "2.03",
       "priceavg": "12.9"
     },
     {
-      "year": "年度    2011\nName: 14, dtype: object",
+      "year": "2011",
       "eps": "0.84",
       "ROE": "3.87",
       "priceavg": "13.8"
     },
     {
-      "year": "年度    2010\nName: 15, dtype: object",
+      "year": "2010",
       "eps": "1.91",
       "ROE": "10.9",
       "priceavg": "15.2"
     },
     {
-      "year": "年度    2009\nName: 16, dtype: object",
+      "year": "2009",
       "eps": "0.31",
       "ROE": "0.82",
       "priceavg": "12.8"
     },
     {
-      "year": "年度    2008\nName: 17, dtype: object",
+      "year": "2008",
       "eps": "-1.7",
       "ROE": "-10.6",
       "priceavg": "14.4"
     },
     {
-      "year": "年度    年度\nName: 18, dtype: object",
+      "year": "年度",
       "eps": "EPS(元)",
       "ROE": "ROE  (%)",
       "priceavg": "年度股價(元)"
     },
     {
-      "year": "年度    年度\nName: 19, dtype: object",
+      "year": "年度",
       "eps": "稅後  EPS",
       "ROE": "ROE  (%)",
       "priceavg": "平均"
     },
     {
-      "year": "年度    2007\nName: 20, dtype: object",
+      "year": "2007",
       "eps": "1.09",
       "ROE": "6.24",
       "priceavg": "19.6"
     },
     {
-      "year": "年度    2006\nName: 21, dtype: object",
+      "year": "2006",
       "eps": "1.81",
       "ROE": "11.4",
       "priceavg": "19.2"
     },
     {
-      "year": "年度    2005\nName: 22, dtype: object",
+      "year": "2005",
       "eps": "0.38",
       "ROE": "2.01",
       "priceavg": "20.3"
     },
     {
-      "year": "年度    2004\nName: 23, dtype: object",
+      "year": "2004",
       "eps": "1.89",
       "ROE": "12.4",
       "priceavg": "25.3"
     },
     {
-      "year": "年度    2003\nName: 24, dtype: object",
+      "year": "2003",
       "eps": "0.92",
       "ROE": "6.24",
       "priceavg": "24.8"
     },
     {
-      "year": "年度    2002\nName: 25, dtype: object",
+      "year": "2002",
       "eps": "0.48",
       "ROE": "3.28",
       "priceavg": "37.7"
     },
     {
-      "year": "年度    2001\nName: 26, dtype: object",
+      "year": "2001",
       "eps": "-0.24",
       "ROE": "-1.46",
       "priceavg": "44.9"
     },
     {
-      "year": "年度    2000\nName: 27, dtype: object",
+      "year": "2000",
       "eps": "4.57",
       "ROE": "31.5",
       "priceavg": "85.4"
     },
     {
-      "year": "年度    1999\nName: 28, dtype: object",
+      "year": "1999",
       "eps": "1.6",
       "ROE": "12",
       "priceavg": "67.4"
     },
     {
-      "year": "年度    1998\nName: 29, dtype: object",
+      "year": "1998",
       "eps": "0.81",
       "ROE": "6.12",
       "priceavg": "52"
     },
     {
-      "year": "年度    1997\nName: 30, dtype: object",
+      "year": "1997",
       "eps": "2.25",
       "ROE": "-",
       "priceavg": "79.3"
     },
     {
-      "year": "年度    1996\nName: 31, dtype: object",
+      "year": "1996",
       "eps": "2.71",
       "ROE": "-",
       "priceavg": "47.6"
     },
     {
-      "year": "年度    1995\nName: 32, dtype: object",
+      "year": "1995",
       "eps": "10.01",
       "ROE": "52.7",
       "priceavg": "100"
     },
     {
-      "year": "年度    1994\nName: 33, dtype: object",
+      "year": "1994",
       "eps": "4.97",
       "ROE": "33.9",
       "priceavg": "110"
     },
     {
-      "year": "年度    1993\nName: 34, dtype: object",
+      "year": "1993",
       "eps": "-",
       "ROE": "-",
       "priceavg": "45.8"
     },
     {
-      "year": "年度    1992\nName: 35, dtype: object",
+      "year": "1992",
       "eps": "-",
       "ROE": "-",
       "priceavg": "39.5"
     },
     {
-      "year": "年度    1991\nName: 36, dtype: object",
+      "year": "1991",
       "eps": "-",
       "ROE": "-",
       "priceavg": "40.2"
     },
     {
-      "year": "年度    1990\nName: 37, dtype: object",
+      "year": "1990",
       "eps": "-",
       "ROE": "-",
       "priceavg": "-"
