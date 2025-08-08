@@ -1,5 +1,799 @@
 {
-  "2330": [],
-  "2317": [],
-  "2303": []
+  "2330": [
+    {
+      "year": "年度    25Q1\nName: 0, dtype: object",
+      "eps": "13.95",
+      "yoy": "+5.25",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    2024\nName: 1, dtype: object",
+      "eps": "45.25",
+      "yoy": "+12.91",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    2023\nName: 2, dtype: object",
+      "eps": "32.34",
+      "yoy": "-6.86",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    2022\nName: 3, dtype: object",
+      "eps": "39.2",
+      "yoy": "+16.19",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    2021\nName: 4, dtype: object",
+      "eps": "23.01",
+      "yoy": "+3.04",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    2020\nName: 5, dtype: object",
+      "eps": "19.97",
+      "yoy": "+6.65",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    2019\nName: 6, dtype: object",
+      "eps": "13.32",
+      "yoy": "-0.22",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    2018\nName: 7, dtype: object",
+      "eps": "13.54",
+      "yoy": "+0.31",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    2017\nName: 8, dtype: object",
+      "eps": "13.23",
+      "yoy": "+0.34",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    2016\nName: 9, dtype: object",
+      "eps": "12.89",
+      "yoy": "+1.07",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    2015\nName: 10, dtype: object",
+      "eps": "11.82",
+      "yoy": "+1.64",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    2014\nName: 11, dtype: object",
+      "eps": "10.18",
+      "yoy": "+2.92",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    2013\nName: 12, dtype: object",
+      "eps": "7.26",
+      "yoy": "+0.84",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    2012\nName: 13, dtype: object",
+      "eps": "6.42",
+      "yoy": "+1.24",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    2011\nName: 14, dtype: object",
+      "eps": "5.18",
+      "yoy": "-1.06",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    2010\nName: 15, dtype: object",
+      "eps": "6.24",
+      "yoy": "+2.79",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    2009\nName: 16, dtype: object",
+      "eps": "3.45",
+      "yoy": "-0.41",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    2008\nName: 17, dtype: object",
+      "eps": "3.86",
+      "yoy": "-0.28",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    年度\nName: 18, dtype: object",
+      "eps": "EPS(元)",
+      "yoy": "EPS(元)",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    年度\nName: 19, dtype: object",
+      "eps": "稅後  EPS",
+      "yoy": "年增  (元)",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    2007\nName: 20, dtype: object",
+      "eps": "4.14",
+      "yoy": "-0.79",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    2006\nName: 21, dtype: object",
+      "eps": "4.93",
+      "yoy": "+1.14",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    2005\nName: 22, dtype: object",
+      "eps": "3.79",
+      "yoy": "-0.18",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    2004\nName: 23, dtype: object",
+      "eps": "3.97",
+      "yoy": "+1.64",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    2003\nName: 24, dtype: object",
+      "eps": "2.33",
+      "yoy": "+1.19",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    2002\nName: 25, dtype: object",
+      "eps": "1.14",
+      "yoy": "+0.31",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    2001\nName: 26, dtype: object",
+      "eps": "0.83",
+      "yoy": "-4.88",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    2000\nName: 27, dtype: object",
+      "eps": "5.71",
+      "yoy": "+2.47",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    1999\nName: 28, dtype: object",
+      "eps": "3.24",
+      "yoy": "+0.7",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    1998\nName: 29, dtype: object",
+      "eps": "2.54",
+      "yoy": "-1.86",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    1997\nName: 30, dtype: object",
+      "eps": "4.4",
+      "yoy": "-2.91",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    1996\nName: 31, dtype: object",
+      "eps": "7.31",
+      "yoy": "-3.17",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    1995\nName: 32, dtype: object",
+      "eps": "10.48",
+      "yoy": "-0.38",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    1994\nName: 33, dtype: object",
+      "eps": "10.86",
+      "yoy": "-",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    1993\nName: 34, dtype: object",
+      "eps": "-",
+      "yoy": "-",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    1992\nName: 35, dtype: object",
+      "eps": "-",
+      "yoy": "-",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    1991\nName: 36, dtype: object",
+      "eps": "-",
+      "yoy": "-",
+      "pe": "",
+      "peg": ""
+    }
+  ],
+  "2317": [
+    {
+      "year": "年度    25Q1\nName: 0, dtype: object",
+      "eps": "3.03",
+      "yoy": "+1.44",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    2024\nName: 1, dtype: object",
+      "eps": "11.01",
+      "yoy": "+0.76",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    2023\nName: 2, dtype: object",
+      "eps": "10.25",
+      "yoy": "+0.04",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    2022\nName: 3, dtype: object",
+      "eps": "10.21",
+      "yoy": "+0.16",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    2021\nName: 4, dtype: object",
+      "eps": "10.05",
+      "yoy": "+2.71",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    2020\nName: 5, dtype: object",
+      "eps": "7.34",
+      "yoy": "-0.98",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    2019\nName: 6, dtype: object",
+      "eps": "8.32",
+      "yoy": "+0.29",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    2018\nName: 7, dtype: object",
+      "eps": "8.03",
+      "yoy": "+0.02",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    2017\nName: 8, dtype: object",
+      "eps": "8.01",
+      "yoy": "-0.59",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    2016\nName: 9, dtype: object",
+      "eps": "8.6",
+      "yoy": "-0.82",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    2015\nName: 10, dtype: object",
+      "eps": "9.42",
+      "yoy": "+0.57",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    2014\nName: 11, dtype: object",
+      "eps": "8.85",
+      "yoy": "+0.69",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    2013\nName: 12, dtype: object",
+      "eps": "8.16",
+      "yoy": "+0.14",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    2012\nName: 13, dtype: object",
+      "eps": "8.02",
+      "yoy": "+0.37",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    2011\nName: 14, dtype: object",
+      "eps": "7.65",
+      "yoy": "-0.36",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    2010\nName: 15, dtype: object",
+      "eps": "8.01",
+      "yoy": "-0.83",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    2009\nName: 16, dtype: object",
+      "eps": "8.84",
+      "yoy": "+1.4",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    2008\nName: 17, dtype: object",
+      "eps": "7.44",
+      "yoy": "-4.91",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    年度\nName: 18, dtype: object",
+      "eps": "EPS(元)",
+      "yoy": "EPS(元)",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    年度\nName: 19, dtype: object",
+      "eps": "稅後  EPS",
+      "yoy": "年增  (元)",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    2007\nName: 20, dtype: object",
+      "eps": "12.35",
+      "yoy": "+0.76",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    2006\nName: 21, dtype: object",
+      "eps": "11.59",
+      "yoy": "+0.99",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    2005\nName: 22, dtype: object",
+      "eps": "10.6",
+      "yoy": "+1.39",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    2004\nName: 23, dtype: object",
+      "eps": "9.21",
+      "yoy": "-0.77",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    2003\nName: 24, dtype: object",
+      "eps": "9.98",
+      "yoy": "+1.8",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    2002\nName: 25, dtype: object",
+      "eps": "8.18",
+      "yoy": "+0.78",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    2001\nName: 26, dtype: object",
+      "eps": "7.4",
+      "yoy": "+0.29",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    2000\nName: 27, dtype: object",
+      "eps": "7.11",
+      "yoy": "+0.05",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    1999\nName: 28, dtype: object",
+      "eps": "7.06",
+      "yoy": "-0.54",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    1998\nName: 29, dtype: object",
+      "eps": "7.6",
+      "yoy": "+0.44",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    1997\nName: 30, dtype: object",
+      "eps": "7.16",
+      "yoy": "+1.86",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    1996\nName: 31, dtype: object",
+      "eps": "5.3",
+      "yoy": "-1.08",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    1995\nName: 32, dtype: object",
+      "eps": "6.38",
+      "yoy": "+3.04",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    1994\nName: 33, dtype: object",
+      "eps": "3.34",
+      "yoy": "-",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    1993\nName: 34, dtype: object",
+      "eps": "-",
+      "yoy": "-",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    1992\nName: 35, dtype: object",
+      "eps": "-",
+      "yoy": "-",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    1991\nName: 36, dtype: object",
+      "eps": "-",
+      "yoy": "-",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    1990\nName: 37, dtype: object",
+      "eps": "-",
+      "yoy": "-",
+      "pe": "",
+      "peg": ""
+    }
+  ],
+  "2303": [
+    {
+      "year": "年度    25Q2\nName: 0, dtype: object",
+      "eps": "1.34",
+      "yoy": "-0.61",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    2024\nName: 1, dtype: object",
+      "eps": "3.8",
+      "yoy": "-1.13",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    2023\nName: 2, dtype: object",
+      "eps": "4.93",
+      "yoy": "-2.16",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    2022\nName: 3, dtype: object",
+      "eps": "7.09",
+      "yoy": "+2.52",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    2021\nName: 4, dtype: object",
+      "eps": "4.57",
+      "yoy": "+2.15",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    2020\nName: 5, dtype: object",
+      "eps": "2.42",
+      "yoy": "+1.6",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    2019\nName: 6, dtype: object",
+      "eps": "0.82",
+      "yoy": "+0.24",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    2018\nName: 7, dtype: object",
+      "eps": "0.58",
+      "yoy": "-0.21",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    2017\nName: 8, dtype: object",
+      "eps": "0.79",
+      "yoy": "+0.11",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    2016\nName: 9, dtype: object",
+      "eps": "0.68",
+      "yoy": "-0.4",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    2015\nName: 10, dtype: object",
+      "eps": "1.08",
+      "yoy": "+0.11",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    2014\nName: 11, dtype: object",
+      "eps": "0.97",
+      "yoy": "-0.04",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    2013\nName: 12, dtype: object",
+      "eps": "1.01",
+      "yoy": "+0.52",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    2012\nName: 13, dtype: object",
+      "eps": "0.49",
+      "yoy": "-0.35",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    2011\nName: 14, dtype: object",
+      "eps": "0.84",
+      "yoy": "-1.07",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    2010\nName: 15, dtype: object",
+      "eps": "1.91",
+      "yoy": "+1.6",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    2009\nName: 16, dtype: object",
+      "eps": "0.31",
+      "yoy": "+2.01",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    2008\nName: 17, dtype: object",
+      "eps": "-1.7",
+      "yoy": "-2.79",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    年度\nName: 18, dtype: object",
+      "eps": "EPS(元)",
+      "yoy": "EPS(元)",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    年度\nName: 19, dtype: object",
+      "eps": "稅後  EPS",
+      "yoy": "年增  (元)",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    2007\nName: 20, dtype: object",
+      "eps": "1.09",
+      "yoy": "-0.72",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    2006\nName: 21, dtype: object",
+      "eps": "1.81",
+      "yoy": "+1.43",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    2005\nName: 22, dtype: object",
+      "eps": "0.38",
+      "yoy": "-1.51",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    2004\nName: 23, dtype: object",
+      "eps": "1.89",
+      "yoy": "+0.97",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    2003\nName: 24, dtype: object",
+      "eps": "0.92",
+      "yoy": "+0.44",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    2002\nName: 25, dtype: object",
+      "eps": "0.48",
+      "yoy": "+0.72",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    2001\nName: 26, dtype: object",
+      "eps": "-0.24",
+      "yoy": "-4.81",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    2000\nName: 27, dtype: object",
+      "eps": "4.57",
+      "yoy": "+2.97",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    1999\nName: 28, dtype: object",
+      "eps": "1.6",
+      "yoy": "+0.79",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    1998\nName: 29, dtype: object",
+      "eps": "0.81",
+      "yoy": "-1.44",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    1997\nName: 30, dtype: object",
+      "eps": "2.25",
+      "yoy": "-0.46",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    1996\nName: 31, dtype: object",
+      "eps": "2.71",
+      "yoy": "-7.3",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    1995\nName: 32, dtype: object",
+      "eps": "10.01",
+      "yoy": "+5.04",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    1994\nName: 33, dtype: object",
+      "eps": "4.97",
+      "yoy": "-",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    1993\nName: 34, dtype: object",
+      "eps": "-",
+      "yoy": "-",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    1992\nName: 35, dtype: object",
+      "eps": "-",
+      "yoy": "-",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    1991\nName: 36, dtype: object",
+      "eps": "-",
+      "yoy": "-",
+      "pe": "",
+      "peg": ""
+    },
+    {
+      "year": "年度    1990\nName: 37, dtype: object",
+      "eps": "-",
+      "yoy": "-",
+      "pe": "",
+      "peg": ""
+    }
+  ]
 }
