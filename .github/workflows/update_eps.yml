@@ -24,6 +24,14 @@ jobs:
       - name: Run script
         run: python generate_eps.py  # ← 換成你的主程式檔案名稱
 
+      - name: Show outputs (debug)
+        run: |
+          echo "PWD=$(pwd)"
+          ls -la
+          echo "---- JSON files ----"
+          ls -la *.json || true
+          git status
+
       - name: Commit and push if changed
         run: |
           git config --global user.name "github-actions[bot]"
