@@ -1,90 +1,66 @@
-# generate_eps.py
+name: update_eps
 
-import requests
-from bs4 import BeautifulSoup
-import pandas as pd
-from io import StringIO
-from tqdm import tqdm
-import json
-import math
+on:
+  workflow_dispatch: {}            # 手動跑
+  schedule:
+    - cron: "0 2 * * *"            # 每天 02:00 自動跑（不需要就刪掉這段）
 
+permissions:
+  contents: write                  # 允許寫入 repo（搭配 token 更保險）
 
-# 要抓的股票代號清單
-stock_ids = ['2330', '2317', '2303']
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          # 使用你在 Secrets 建的 PAT（名稱 GH_PAT）
+          token: ${{ secrets.GH_PAT }}
 
-# ===== 輸出檔名（跟 workflow 保持一致）=====
-OUTFILE = "eps_cache.json"
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
 
-def pick(row: pd.Series, candidates):
-    """在多個可能欄名中，挑第一個存在且非空的值，回傳乾淨的字串"""
-    for c in candidates:
-        if c in row:
-            v = row[c]
-            # pandas 可能回傳 NaN/None 或 Series
-            if isinstance(v, pd.Series):
-                v = v.iloc[0] if len(v) else None
-            if v is not None and not (isinstance(v, float) and math.isnan(v)):
-                s = str(v).strip()
-                if s != "":
-                    return s
-    return ""
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
 
-eps_cache = {}
+      - name: Run scraper
+        run: |
+          python generate_eps.py
 
-for stock_id in tqdm(stock_ids, desc="抓取 EPS"):
-    url = f"https://goodinfo.tw/tw/StockBzPerformance.asp?STOCK_ID={stock_id}"
-    headers = {
-        'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)',
-        'Cookie': 'IS_TOUCH_DEVICE=F; SCREEN_SIZE=WIDTH=2048&HEIGHT=1280;',
-    }
+      - name: Show outputs (debug)
+        run: |
+          echo "PWD=$(pwd)"
+          ls -la
+          echo "---- JSON files ----"
+          ls -la *.json || true
+          echo "---- First lines of eps_cache.json ----"
+          test -f eps_cache.json && head -n 20 eps_cache.json || echo "eps_cache.json not found"
 
-    try:
-        res = requests.get(url, headers=headers, timeout=15)
-        res.encoding = 'utf-8'
-        
-        soup = BeautifulSoup(res.text, 'lxml')
-        table_html = soup.select_one('#txtFinDetailData')
+      - name: Ensure eps_cache.json exists
+        run: |
+          if [ ! -f eps_cache.json ]; then
+            echo "❌ eps_cache.json not found. Stop."
+            exit 1
+          fi
 
-        if not table_html:
-            print(f"⚠️ 找不到表格 for {stock_id}")
-            continue
-     # 讀表
-        dfs = pd.read_html(StringIO(table_html.prettify()))
-        if not dfs:
-            print(f"⚠️ 讀不到表格 for {stock_id}")
-            continue
+      - name: Commit and push if changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
 
-       
-        df = dfs[0]
-    # 保險：把欄名轉成字串
-        df.columns = df.columns.map(str)
+          git add eps_cache.json
 
-        eps_data = []
-        for _, row in df.iterrows():
-            year = pick(row, ["年度", "年/季"])
-            if year == "":
-                # 跳過沒有年份的列
-                continue
+          # 沒有變更就不要 commit / push
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
 
-            item = {
-                "year": year,
-                "eps": pick(row, ["稅後EPS(元)", "EPS(元)"]),
-                "yoy": pick(row, ["年增(元)", "年增"]),
-                "pe": pick(row, ["本益比", "PE"]),
-            }
-            eps_data.append(item)
-
-
-        eps_cache[stock_id] = eps_data
-        print(f"✅ 完成 {stock_id}（共 {len(eps_data)} 筆）")
-
-    except Exception as e:
-        print(f"❌ 失敗 {stock_id}: {e}")
-
-# 寫入 JSON 快取檔案
-with open("eps_cache.json", "w", encoding="utf-8") as f:
-    json.dump(eps_cache, f, ensure_ascii=False, indent=2)
-
-print(f"📁 eps_cache.json 儲存完成！")
-
-
+          git commit -m "✅ Update EPS cache [skip ci]"
+          git push
