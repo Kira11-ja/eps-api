@@ -66,8 +66,8 @@ def parse_table(html: str, stock_id: str) -> list[dict]:
     # 可能的欄位名稱（站方會變動）
     YEAR_KEYS = ["年度", "年/季", "年季", "年季別"]
     EPS_KEYS  = ["EPS(元)", "稅後EPS(元)", "稅後EPS"]
-    YOY_KEYS  = ["年增(元)", "年增率(元)", "年增率"]
-    PE_KEYS   = ["本益比", "本益比(倍)"]
+    ROE_KEYS  = ["ROE"]
+    priceavg_KEYS   = ["平均"]
 
     def first_col(row, keys):
         for k in keys:
@@ -83,8 +83,8 @@ def parse_table(html: str, stock_id: str) -> list[dict]:
         rows.append({
             "year": year,
             "eps": first_col(row, EPS_KEYS),
-            "yoy": first_col(row, YOY_KEYS),
-            "pe":  first_col(row, PE_KEYS),
+            "roe": first_col(row, ROE_KEYS),
+            "priceavg":  first_col(row, priceavg_KEYS),
         })
     return rows
 
@@ -133,3 +133,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
