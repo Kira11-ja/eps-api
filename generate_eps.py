@@ -45,48 +45,48 @@ def fetch_html(session: requests.Session, stock_id: str) -> str | None:
 def parse_table(html: str, stock_id: str) -> list[dict]:
     soup = BeautifulSoup(html, "lxml")
 
-    # 常見容器：#txtFinDetailData（有時候會變），備援抓第一個包含「年度」字樣的表
-    data_box = soup.select_one("#txtFinDetailData")
-    if not data_box:
-        # 備援：抓第一個 table，讓你至少看到欄位以便 debug
-        tbl = soup.select_one("table")
-        if not tbl:
-            return []
-        data_box = tbl
-
-    try:
-        dfs = pd.read_html(StringIO(data_box.prettify()))
-        if not dfs:
-            return []
-        df = dfs[0]
-        df.columns = df.columns.map(str)
-    except Exception:
+    box = soup.select_one("#txtFinDetailData") or soup.select_one("table")
+    if not box:
         return []
 
-    # 可能的欄位名稱（站方會變動）
-    YEAR_KEYS = ["年度", "年/季", "年季", "年季別"]
-    EPS_KEYS  = ["EPS(元)", "稅後EPS(元)", "稅後EPS"]
-    ROE_KEYS  = ["ROE"]
-    PRICEAVG_KEYS   = ["平均"]
+    dfs = pd.read_html(StringIO(box.prettify()))
+    if not dfs:
+        return []
+    df = dfs[0]
+    df.columns = [str(c).strip() for c in df.columns.map(str)]
 
-    def first_col(row, keys):
-        for k in keys:
-            if k in row:
-                return str(row[k]).strip()
-        return ""
+    # 欄位偵測
+    def find_col(cols, needles):
+        for c in cols:
+            cc = str(c)
+            if any(n in cc for n in needles):
+                return c
+        return None
+
+    year_col     = find_col(df.columns, ["年度", "年/季", "年季", "年季別"])
+    eps_col      = find_col(df.columns, ["EPS"])
+    roe_col      = find_col(df.columns, ["ROE"])
+    priceavg_col = find_col(df.columns, ["平均"])
 
     rows = []
     for _, row in df.iterrows():
-        year = first_col(row, YEAR_KEYS)
-        if not year or year.lower() in ("nan", "none"):
+        # ✅ 不做正規化，直接用原始文字
+        year = str(row.get(year_col, "")).strip() if year_col else ""
+        if not year:
             continue
+
         rows.append({
-            "year": year,
-            "eps": first_col(row, EPS_KEYS),
-            "roe": first_col(row, ROE_KEYS),
-            "priceavg":  first_col(row, PRICEAVG_KEYS),
+            "year": year,                          # ← 原樣保留（可能是 25Q1、2024 年估…）
+            "eps": "" if not eps_col else str(row.get(eps_col, "")).strip(),
+            "ROE": "" if not roe_col else str(row.get(roe_col, "")).strip(),
+            "priceavg": "" if not priceavg_col else str(row.get(priceavg_col, "")).strip(),
         })
+
+    # 如果你不要排序，也可以拿掉這行
+    # rows.sort(key=lambda r: r["year"], reverse=True)
+
     return rows
+
 
 def main():
     out = {}
@@ -133,5 +133,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
