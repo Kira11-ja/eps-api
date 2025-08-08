@@ -82,8 +82,9 @@ for stock_id in tqdm(stock_ids, desc="抓取 EPS"):
         print(f"❌ 失敗 {stock_id}: {e}")
 
 # 寫入 JSON 快取檔案
-with open(OUTFILE, "w", encoding="utf-8") as f:
+with open("eps_cache.json", "w", encoding="utf-8") as f:
     json.dump(eps_cache, f, ensure_ascii=False, indent=2)
 
-print(f"📁 {OUTFILE} 儲存完成！")
+print(f"📁 eps_cache.json 儲存完成！")
+
 
