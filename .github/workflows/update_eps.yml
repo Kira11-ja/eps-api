@@ -28,6 +28,6 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add eps_data.json
+          git add eps_cache.json
           git commit -m "✅ Update EPS cache" || echo "No changes to commit"
           git push
